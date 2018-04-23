@@ -23,12 +23,19 @@ namespace DisplayForSlow.Controllers
                     {
                         Id = i,
                         FirstName = "FirstName" + i,
-                        LastName = "LastName" + i
+                        LastName = "LastName" + i,
+                        Address = new Address
+                        {
+                            Id = i,
+                            Street = "Street" + i,
+                            City = "City" + i,
+                            State = "State" + i
+                        }
                     };
 
                     if (i % 2 == 0)
                     {
-                        customer.Zipcode = i;
+                        customer.Address.Zipcode = i;
                     }
 
                     return customer;
